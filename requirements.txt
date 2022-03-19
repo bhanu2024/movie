@@ -3,3 +3,4 @@ pandas==1.2.5
 sklearn==0.0
 scikit-learn==1.0.2
 Flask==1.1.2
+gunicorn==20.1.0
