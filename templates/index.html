@@ -1,0 +1,39 @@
+
+{% include "header.html" %}
+
+    <form action="{{ url_for('recommend')}}" method="post">
+        <div class="wrap">
+           <div class="search">
+              <input type="text" name="movie"
+                     class="searchTerm" placeholder="Enter your favourite movie name"
+                     required="required"
+                     onfocus="this.placeholder=''"
+                     onblur="this.placeholder='Enter your favourite movie name'">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+             </button>
+           </div>
+        </div>
+    </form>
+
+    <section id="movie">
+        <div class="container-fluid">
+            <div class="row p-2">
+                {% for name in movie_list %}
+                <div class="col-lg-2 col-md-2 col-4 pl-1 pb-3">
+                    <div class="card">
+                      <img class="card-img-top" src={{movie_list[name]}} alt="images/b3.jpg" width="100" height="260">
+                      <h5 class="card-title">{{name}}</h5>
+
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
+
