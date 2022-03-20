@@ -39,7 +39,7 @@ app = Flask(__name__)
 
 
 # default page of our web-app
-@app.route('/')
+@app.route('/', methods=['POST'])
 def home():
     list_of_all_titles = movies_data['title'].tolist()
 
@@ -103,4 +103,4 @@ def recommend():
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run()
