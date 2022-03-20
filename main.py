@@ -39,7 +39,7 @@ app = Flask(__name__)
 
 
 # default page of our web-app
-@app.route('/', methods=['POST'])
+@app.route('/', methods=['POST', 'GET'])
 def home():
     list_of_all_titles = movies_data['title'].tolist()
 
